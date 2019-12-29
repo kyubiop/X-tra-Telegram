@@ -1,2 +1,2 @@
-telethon
+--upgrade telethon
 --upgrade -r requirements-startup.txt
