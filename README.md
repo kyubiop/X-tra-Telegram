@@ -12,7 +12,7 @@ git clone https://github.com/rogwars3/X-tra-Telegram
 cd X-tra-Telegram
 virtualenv -p /usr/bin/python3 venv
 . ./venv/bin/activate
-pip install -r requirements.txt
+pip install --upgrade -r requirements.txt
 # <Create local_config.py with variables as given below>
 python3 -m userbot
 ```
