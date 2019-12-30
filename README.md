@@ -14,7 +14,7 @@ virtualenv -p /usr/bin/python3 venv
 . ./venv/bin/activate
 pip install --upgrade -r requirements.txt
 # <Create local_config.py with variables as given below>
-python3 -m userbot
+python -m userbot
 ```
 
 An example `local_config.py` file could be:
