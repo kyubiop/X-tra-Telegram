@@ -81,7 +81,6 @@ def load_module(shortname):
         import sys
         import importlib
         from pathlib import Path
-        import userbot.plugins.sql_helper
         path = Path(f"userbot/plugins/{shortname}.py")
         name = "userbot.plugins.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
@@ -104,11 +103,9 @@ def load_module(shortname):
         mod.logger = logging.getLogger(shortname)
         # support for uniborg
         sys.modules["uniborg.util"] = userbot.utils
-		sys.modules["sql_helpers"] = userbot.plugins.sql_helper
         mod.Config = Config
         mod.borg = bot
         # support for paperplaneextended
-		sys.modules["userbot.modules.sql_helper"] = userbot.plugins.sql_helper
         sys.modules["userbot.events"] = userbot.utils
         spec.loader.exec_module(mod)
         # for imports
@@ -350,3 +347,4 @@ class Loader():
     def __init__(self, func=None, **args):
         self.Var = Var
         bot.add_event_handler(func, events.NewMessage(**args))
+
