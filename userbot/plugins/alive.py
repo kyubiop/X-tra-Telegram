@@ -1,5 +1,15 @@
-@command(pattern="^.alive", outgoing=True)
-async def hello_world(event):
-    if event.fwd_from:
-        return
-    await event.edit("**HELLO WORLD**\n\nThe following is controlling me too!\n" + str(event.from_id) + " " + Var.SUDO_USERS)
+""".admin Plugin for @XtraTgBot"""
+import asyncio
+from telethon import events
+from telethon.tl.types import ChannelParticipantsAdmins
+from platform import uname
+from userbot import ALIVE_NAME
+from userbot.utils import admin_cmd
+
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "No name set yet nibba, check pinned in @XtraTgBot"
+
+@command(outgoing=True, pattern="^.alive$")
+async def amireallyalive(alive):
+    """ For .alive command, check if the bot is running.  """
+    await alive.edit("**`YEA I'M ALIVE. DAFUQ YOU WANT, BITCH! ψ(｀∇´)ψ`**\n\n`"
+                     f"`My peru owner`: {DEFAULTUSER}\n")
