@@ -118,16 +118,30 @@
     }
   }],
   "buildpacks": [{
-    "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+    "url":"heroku/python"
   },{
-    "url":"https://github.com/amivin/aria2-heroku.git"
+    "url":"https://github.com/rebel6969/heroku-buildpack-redis.git"
   },{
-    "url":"https://github.com/heroku/heroku-buildpack-google-chrome"
+    "url":"https://github.com/rebel6969/heroku-buildpack-ci-redis.git"
   },{
-    "url":"https://github.com/heroku/heroku-buildpack-chromedriver"
+    "url":"https://github.com/rebel6969/heroku-buildpack-redis-cloud.git"
   },{
-    "url": "https://github.com/opendoor-labs/heroku-buildpack-p7zip"
+    "url":"https://github.com/opendoor-labs/heroku-buildpack-p7zip"
   },{
-    "url": "heroku/python"
+    "url":"https://github.com/rebel6969/aria2-build.git"
+  },{
+    "url":"https://github.com/notvad/heroku-buildpack-selenium.git"
+  },{
+    "url":"https://github.com/heroku/heroku-buildpack-google-chrome.git"
+  },{
+    "url":"https://github.com/heroku/heroku-buildpack-chromedriver.git"
+  },{
+    "url":"https://github.com/ewwink/heroku-google-drive.git"
+  },{
+    "url":"https://github.com/emartech/heroku-buildpack-cloud-sql-proxy.git"
+  },{
+    "url":"https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+  },{
+    "url":"https://github.com/rebel6969/heroku-buildpack-youtube-dl.git"
   }]
 }
