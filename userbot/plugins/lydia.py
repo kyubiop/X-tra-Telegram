@@ -21,7 +21,7 @@ async def repcf(event):
         reply = await event.get_reply_message()
         msg = reply.text
         text_rep = session.think_thought((session_id, msg))
-        await event.edit("**Lydia says**: {0}".format(text_rep))
+        await event.edit("**sun bsdk**: {0}".format(text_rep))
     except Exception as e:
         await event.edit(str(e))
 
@@ -30,7 +30,7 @@ async def addcf(event):
     if event.fwd_from:
         return
     await event.edit("Running on Non-SQL mode for now...")
-    await asyncio.sleep(4)
+    await asyncio.sleep(3)
     await event.edit("Processing...")
     reply_msg = await event.get_reply_message()
     if reply_msg:
@@ -47,7 +47,7 @@ async def remcf(event):
     if event.fwd_from:
         return
     await event.edit("Running on Non-SQL mode for now...")
-    await asyncio.sleep(4)
+    await asyncio.sleep(3)
     await event.edit("Processing...")
     reply_msg = await event.get_reply_message()
     try:
